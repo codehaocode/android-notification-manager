@@ -33,7 +33,7 @@ public class FilterView extends PopupWindow {
         showAtLocation(view, Gravity.TOP | Gravity.END, offset, offset * 2);
     }
 
-    public void setFilteringMode(FilterMode filteringMode) {
+    public void setFilteringMode(com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode filteringMode) {
         Log.d("TEST_TEST", filteringMode.toString());
         switch (filteringMode) {
             case ALL:

@@ -83,7 +83,7 @@ public class AppForegroundService extends DaggerService {
     }
 
     private void scheduleNotificationJob() {
-        ComponentName componentName = new ComponentName(this, NotificationJobScheduler.class);
+        ComponentName componentName = new ComponentName(this, com.github.codehaocode.firstnotificationmanagerapp.services.NotificationJobScheduler.class);
         JobInfo.Builder jobBuilder = new JobInfo.Builder(NOTIFICATION_JOB_ID, componentName).setPersisted(false);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             jobBuilder.setPeriodic(NOTIFICATION_JOB_INTERVAL, NOTIFICATION_JOB_INTERVAL_FLEX);

@@ -31,7 +31,7 @@ public class MainActivity extends DaggerAppCompatActivity implements FilterView.
 
     private ActivityMainBinding binding;
     private ViewModelProvider.Factory factory;
-    private MainViewModel viewModel;
+    private com.github.codehaocode.firstnotificationmanagerapp.presentation.MainViewModel viewModel;
     private FilterView filterView;
     private static final String ACTION_NOTIFICATION_LISTENER_SETTINGS = "android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS";
 
@@ -43,7 +43,7 @@ public class MainActivity extends DaggerAppCompatActivity implements FilterView.
         setSupportActionBar(binding.toolbar);
         initFilterView();
         initRecyclerView();
-        viewModel = new ViewModelProvider(getViewModelStore(), factory).get(MainViewModel.class);
+        viewModel = new ViewModelProvider(getViewModelStore(), factory).get(com.github.codehaocode.firstnotificationmanagerapp.presentation.MainViewModel.class);
         initOnClick();
         initObservers();
     }
@@ -98,7 +98,7 @@ public class MainActivity extends DaggerAppCompatActivity implements FilterView.
     private void initRecyclerView() {
         binding.rvList.setHasFixedSize(true);
         binding.rvList.setLayoutManager(new LinearLayoutManager(this));
-        binding.rvList.setAdapter(new NotificationsListAdapter());
+        binding.rvList.setAdapter(new com.github.codehaocode.firstnotificationmanagerapp.presentation.NotificationsListAdapter());
     }
 
     private void initOnClick() {
@@ -144,8 +144,8 @@ public class MainActivity extends DaggerAppCompatActivity implements FilterView.
         }
     }
 
-    private NotificationsListAdapter getAdapter() {
-        return (NotificationsListAdapter) binding.rvList.getAdapter();
+    private com.github.codehaocode.firstnotificationmanagerapp.presentation.NotificationsListAdapter getAdapter() {
+        return (com.github.codehaocode.firstnotificationmanagerapp.presentation.NotificationsListAdapter) binding.rvList.getAdapter();
     }
 
     private void startService() {
