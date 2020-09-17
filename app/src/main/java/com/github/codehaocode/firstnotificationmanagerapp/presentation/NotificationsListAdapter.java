@@ -2,6 +2,8 @@ package com.github.codehaocode.firstnotificationmanagerapp.presentation;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,6 +55,13 @@ public class NotificationsListAdapter extends RecyclerView.Adapter<Notifications
                 PackageManager packageManager = itemView.getContext().getPackageManager();
                 PackageInfo packageInfo = packageManager.getPackageInfo(notification.getAppPackageName(), 0);
                 Drawable icon = packageInfo.applicationInfo.loadIcon(packageManager);
+
+                // Apply grayscale filter to app icon
+                ColorMatrix matrix = new ColorMatrix();
+                matrix.setSaturation(0);
+                ColorMatrixColorFilter filter = new ColorMatrixColorFilter(matrix);
+                icon.setColorFilter(filter);
+
                 ((ImageView) itemView.findViewById(R.id.icon)).setImageDrawable(icon);
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
