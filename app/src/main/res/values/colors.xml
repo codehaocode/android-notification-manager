@@ -6,10 +6,10 @@
     <color name="colorShadow">#4e4e4e</color>
     <color name="textColorDate">#e1ff01</color>
     <color name="textNoNotifications">#e1ff01</color>
-    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimary">#303030</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="buttonInactive">#4e4e4e</color>
-    <color name="buttonActive">#000000</color>
+    <color name="buttonInactive">#000000</color>
+    <color name="buttonActive">#4e4e4e</color>
     <color name="buttonTextColor">#e1ff01</color>
 </resources>
