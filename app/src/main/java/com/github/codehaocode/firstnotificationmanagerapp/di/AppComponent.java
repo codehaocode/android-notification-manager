@@ -1,8 +1,8 @@
 package com.github.codehaocode.firstnotificationmanagerapp.di;
 
-import android.app.Application;
 import android.content.Context;
 
+import com.github.codehaocode.firstnotificationmanagerapp.Application;
 import com.github.codehaocode.firstnotificationmanagerapp.di.modules.ComponentsModule;
 import com.github.codehaocode.firstnotificationmanagerapp.di.modules.ModelModule;
 import com.github.codehaocode.firstnotificationmanagerapp.di.modules.ViewModelModule;

@@ -1,8 +1,8 @@
 package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
 
-import android.app.Application;
 import android.content.Context;
 
+import com.github.codehaocode.firstnotificationmanagerapp.Application;
 import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationsDatabase;
 import com.github.codehaocode.firstnotificationmanagerapp.model.mapper.NotificationTypesMapper;
 import com.github.codehaocode.firstnotificationmanagerapp.model.repository.NotificationsRepository;
@@ -15,6 +15,7 @@ import dagger.Module;
 import dagger.Provides;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.subjects.BehaviorSubject;
+import io.reactivex.subjects.Subject;
 
 @Module
 public class ModelModule {
@@ -59,3 +60,4 @@ public class ModelModule {
         return BehaviorSubject.create();
     }
 }
+
