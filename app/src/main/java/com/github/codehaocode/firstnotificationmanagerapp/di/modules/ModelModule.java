@@ -7,6 +7,8 @@ import com.github.codehaocode.firstnotificationmanagerapp.model.database.Notific
 import com.github.codehaocode.firstnotificationmanagerapp.model.mapper.NotificationTypesMapper;
 import com.github.codehaocode.firstnotificationmanagerapp.model.repository.NotificationsRepository;
 import com.github.codehaocode.firstnotificationmanagerapp.model.repository.NotificationsRepositoryImpl;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode;
 import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationReceiver;
 
 import javax.inject.Singleton;

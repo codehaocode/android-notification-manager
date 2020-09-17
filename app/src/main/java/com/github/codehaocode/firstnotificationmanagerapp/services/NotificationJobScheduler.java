@@ -1,6 +1,5 @@
 package com.github.codehaocode.firstnotificationmanagerapp.services;
 
-import android.app.Application;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.job.JobParameters;
@@ -10,7 +9,8 @@ import android.content.Intent;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
-import com.github.codehaocode.firstnotificationmanagerapp.MainActivity;
+import com.github.codehaocode.firstnotificationmanagerapp.Application;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
 import com.github.codehaocode.firstnotificationmanagerapp.R;
 import com.github.codehaocode.firstnotificationmanagerapp.model.repository.NotificationsRepository;
 
@@ -74,7 +74,7 @@ public class NotificationJobScheduler extends JobService {
         Intent activityIntent = new Intent(this, MainActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, activityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         return new NotificationCompat.Builder(this, Application.NOTIFICATION_CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_notification)
+                .setSmallIcon(R.drawable.ic_launcher_foreground)
                 .setContentIntent(contentIntent)
                 .setContentText(getString(R.string.notifications_recorded, String.valueOf(countOfNotifications)))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)

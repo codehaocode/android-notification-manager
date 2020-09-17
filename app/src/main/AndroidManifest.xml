@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".presentation.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,6 +24,23 @@
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
+
+        <service android:name=".services.AppForegroundService" />
+        <service
+            android:name=".services.NotificationProcessor"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".services.NotificationJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".services.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.github.cr9ck.notificationrecorder.receiver.NotificationReceiver" />
+            </intent-filter>
+        </receiver>
 
     </application>
 

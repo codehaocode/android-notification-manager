@@ -23,3 +23,4 @@ public interface AppComponent extends AndroidInjector<Application> {
         AppComponent create(@BindsInstance Context context);
     }
 }
+

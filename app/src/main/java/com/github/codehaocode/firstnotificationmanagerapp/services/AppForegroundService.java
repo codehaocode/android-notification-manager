@@ -1,6 +1,5 @@
 package com.github.codehaocode.firstnotificationmanagerapp.services;
 
-import android.app.Application;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.job.JobInfo;
@@ -14,7 +13,8 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
-import com.github.codehaocode.firstnotificationmanagerapp.MainActivity;
+import com.github.codehaocode.firstnotificationmanagerapp.Application;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
 import com.github.codehaocode.firstnotificationmanagerapp.R;
 
 import java.util.concurrent.TimeUnit;

@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.github.codehaocode.firstnotificationmanagerapp.di.viewmodel.ViewModelFactory;
 import com.github.codehaocode.firstnotificationmanagerapp.di.viewmodel.ViewModelKey;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainViewModel;
 
 import dagger.Binds;
 import dagger.Module;
@@ -22,3 +23,4 @@ public abstract class ViewModelModule {
     @Binds
     abstract ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);
 }
+

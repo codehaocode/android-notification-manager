@@ -1,6 +1,6 @@
 package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
 
-import com.github.codehaocode.firstnotificationmanagerapp.MainActivity;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
 import com.github.codehaocode.firstnotificationmanagerapp.services.AppForegroundService;
 import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationJobScheduler;
 import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor;
