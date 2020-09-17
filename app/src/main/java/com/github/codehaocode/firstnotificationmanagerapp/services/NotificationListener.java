@@ -10,6 +10,12 @@ import android.service.notification.StatusBarNotification;
 
 import java.util.Calendar;
 
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_APP_NAME;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_APP_PACKAGE_NAME;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_CALENDAR;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_ID;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_TEXT;
+
 public class NotificationListener extends NotificationListenerService {
 
     @Override

@@ -11,6 +11,11 @@ import com.github.codehaocode.firstnotificationmanagerapp.model.repository.Notif
 
 import java.util.Calendar;
 
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjection;
+
+
 public class NotificationProcessor extends JobIntentService {
 
     private NotificationsRepository notificationsRepository;

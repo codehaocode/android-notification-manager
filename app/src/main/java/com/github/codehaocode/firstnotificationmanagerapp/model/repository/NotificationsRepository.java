@@ -9,6 +9,6 @@ import java.util.List;
 public interface NotificationsRepository {
     void addNotification(NotificationModel notificationModel);
     @NonNull
-    Flowable<List<NotificationModel>> getNotifications(FilterPeriod period);
+//    Flowable<List<NotificationModel>> getNotifications(FilterPeriod period);
     int  getNotificationsCount();
 }

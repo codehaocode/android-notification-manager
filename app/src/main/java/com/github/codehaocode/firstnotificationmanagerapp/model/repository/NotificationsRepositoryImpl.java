@@ -3,8 +3,13 @@ package com.github.codehaocode.firstnotificationmanagerapp.model.repository;
 import androidx.annotation.NonNull;
 
 import com.github.codehaocode.firstnotificationmanagerapp.model.NotificationModel;
+import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationEntity;
+import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationsDao;
+import com.github.codehaocode.firstnotificationmanagerapp.model.mapper.TypeMapper;
 
 import java.util.List;
+
+import io.reactivex.Flowable;
 
 public class NotificationsRepositoryImpl implements NotificationsRepository {
 
@@ -24,10 +29,10 @@ public class NotificationsRepositoryImpl implements NotificationsRepository {
     }
 
     @NonNull
-    @Override
-    public Flowable<List<NotificationModel>> getNotifications(FilterPeriod period) {
-        return notificationsDao.getNotification(period.getStartPeriod()).map(notificationEntities -> mapper.mapToModel(notificationEntities));
-    }
+//    @Override
+//    public Flowable<List<NotificationModel>> getNotifications(FilterPeriod period) {
+//        return notificationsDao.getNotification(period.getStartPeriod()).map(notificationEntities -> mapper.mapToModel(notificationEntities));
+//    }
 
     @Override
     public int getNotificationsCount() {
