@@ -22,6 +22,8 @@ import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.Subject;
 
+import static com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode.ALL;
+
 public class MainViewModel extends ViewModel {
 
     private NotificationsRepository notificationsRepository;

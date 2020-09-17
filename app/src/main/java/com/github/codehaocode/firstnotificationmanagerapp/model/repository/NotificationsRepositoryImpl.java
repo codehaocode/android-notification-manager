@@ -6,6 +6,7 @@ import com.github.codehaocode.firstnotificationmanagerapp.model.NotificationMode
 import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationEntity;
 import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationsDao;
 import com.github.codehaocode.firstnotificationmanagerapp.model.mapper.TypeMapper;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.period.FilterPeriod;
 
 import java.util.List;
 
@@ -29,10 +30,10 @@ public class NotificationsRepositoryImpl implements NotificationsRepository {
     }
 
     @NonNull
-//    @Override
-//    public Flowable<List<NotificationModel>> getNotifications(FilterPeriod period) {
-//        return notificationsDao.getNotification(period.getStartPeriod()).map(notificationEntities -> mapper.mapToModel(notificationEntities));
-//    }
+    @Override
+    public Flowable<List<NotificationModel>> getNotifications(FilterPeriod period) {
+        return notificationsDao.getNotification(period.getStartPeriod()).map(notificationEntities -> mapper.mapToModel(notificationEntities));
+    }
 
     @Override
     public int getNotificationsCount() {
