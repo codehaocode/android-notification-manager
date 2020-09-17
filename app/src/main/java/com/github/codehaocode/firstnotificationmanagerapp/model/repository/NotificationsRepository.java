@@ -10,6 +10,7 @@ import java.util.List;
 import io.reactivex.Flowable;
 
 public interface NotificationsRepository {
+
     void addNotification(NotificationModel notificationModel);
     @NonNull
     Flowable<List<NotificationModel>> getNotifications(FilterPeriod period);

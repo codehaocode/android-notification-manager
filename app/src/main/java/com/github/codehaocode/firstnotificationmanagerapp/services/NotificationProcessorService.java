@@ -15,8 +15,7 @@ import javax.inject.Inject;
 
 import dagger.android.AndroidInjection;
 
-
-public class NotificationProcessor extends JobIntentService {
+public class NotificationProcessorService extends JobIntentService {
 
     private NotificationsRepository notificationsRepository;
     private static final int JOB_ID = 1111;
@@ -28,7 +27,7 @@ public class NotificationProcessor extends JobIntentService {
     public static final String EXTRA_NOTIFICATION_CALENDAR = "EXTRA_NOTIFICATION_CALENDAR";
 
     public static void enqueueWork(Context context, Intent serviceIntent) {
-        enqueueWork(context, NotificationProcessor.class, JOB_ID, serviceIntent);
+        enqueueWork(context, NotificationProcessorService.class, JOB_ID, serviceIntent);
     }
 
     @Override
@@ -49,5 +48,8 @@ public class NotificationProcessor extends JobIntentService {
         notificationsRepository.addNotification(notification);
     }
 
+    @Inject
+    public void setNotificationsRepository(NotificationsRepository notificationsRepository) {
+        this.notificationsRepository = notificationsRepository;
+    }
 }
-

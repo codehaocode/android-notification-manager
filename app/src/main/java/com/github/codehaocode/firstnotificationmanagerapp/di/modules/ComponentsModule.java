@@ -3,7 +3,7 @@ package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
 import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
 import com.github.codehaocode.firstnotificationmanagerapp.services.AppForegroundService;
 import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationJobScheduler;
-import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor;
+import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -15,7 +15,7 @@ public abstract class ComponentsModule {
     abstract MainActivity contributeMainActivity();
 
     @ContributesAndroidInjector
-    abstract NotificationProcessor contributeForegroundService();
+    abstract NotificationProcessorService contributeForegroundService();
 
     @ContributesAndroidInjector
     abstract AppForegroundService contributeAppForegroundService();

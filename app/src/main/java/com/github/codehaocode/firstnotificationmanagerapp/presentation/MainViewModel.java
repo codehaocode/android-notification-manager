@@ -23,6 +23,9 @@ import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.Subject;
 
 import static com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode.ALL;
+import static com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode.DAY;
+import static com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode.HOUR;
+import static com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode.MONTH;
 
 public class MainViewModel extends ViewModel {
 
@@ -67,6 +70,18 @@ public class MainViewModel extends ViewModel {
         subject.onNext(ALL);
     }
 
+    public void filterForHour() {
+        subject.onNext(HOUR);
+    }
+
+    public void filterForDay() {
+        subject.onNext(DAY);
+    }
+
+    public void filterForMonth() {
+        subject.onNext(MONTH);
+    }
+
     public void toggleService() {
         serviceState = !serviceState;
         serviceActive.setValue(serviceState);
@@ -100,6 +115,14 @@ public class MainViewModel extends ViewModel {
     }
 
     private Observable<List<NotificationModel>> switchSource(FilterMode mode) {
+        switch (mode) {
+            case HOUR:
+                return notificationsRepository.getNotifications(new FilterPeriodImpl(HOUR)).toObservable();
+            case DAY:
+                return notificationsRepository.getNotifications(new FilterPeriodImpl(DAY)).toObservable();
+            case MONTH:
+                return notificationsRepository.getNotifications(new FilterPeriodImpl(MONTH)).toObservable();
+        }
         return notificationsRepository.getNotifications(new FilterPeriodImpl(ALL)).toObservable();
     }
 }

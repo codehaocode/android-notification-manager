@@ -1,6 +1,5 @@
 package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
 
-
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -23,4 +22,3 @@ public abstract class ViewModelModule {
     @Binds
     abstract ViewModelProvider.Factory bindViewModelFactory(ViewModelFactory factory);
 }
-

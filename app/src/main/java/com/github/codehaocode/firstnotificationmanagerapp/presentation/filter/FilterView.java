@@ -39,6 +39,15 @@ public class FilterView extends PopupWindow {
             case ALL:
                 ((RadioButton) getContentView().findViewById(R.id.filterAll)).setChecked(true);
                 break;
+            case HOUR:
+                ((RadioButton) getContentView().findViewById(R.id.filterHour)).setChecked(true);
+                break;
+            case DAY:
+                ((RadioButton) getContentView().findViewById(R.id.filterDay)).setChecked(true);
+                break;
+            case MONTH:
+                ((RadioButton) getContentView().findViewById(R.id.filterMonth)).setChecked(true);
+                break;
         }
     }
 
@@ -48,6 +57,18 @@ public class FilterView extends PopupWindow {
                 case R.id.filterAll:
                     if (listener == null) return;
                     listener.onFilterAll();
+                    break;
+                case R.id.filterHour:
+                    if (listener == null) return;
+                    listener.onFilterHour();
+                    break;
+                case R.id.filterDay:
+                    if (listener == null) return;
+                    listener.onFilterDay();
+                    break;
+                case R.id.filterMonth:
+                    if (listener == null) return;
+                    listener.onFilterMonth();
                     break;
                 default:
                     break;
@@ -62,6 +83,11 @@ public class FilterView extends PopupWindow {
 
     public interface FilterSelectedListener {
         void onFilterAll();
+
+        void onFilterHour();
+
+        void onFilterDay();
+
+        void onFilterMonth();
     }
 }
-

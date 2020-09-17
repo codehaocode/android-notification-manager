@@ -59,4 +59,3 @@ public class NotificationTypesMapper implements TypeMapper<NotificationModel, No
         return result;
     }
 }
-

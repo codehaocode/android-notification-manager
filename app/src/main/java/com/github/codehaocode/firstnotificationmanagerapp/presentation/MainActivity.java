@@ -1,6 +1,5 @@
 package com.github.codehaocode.firstnotificationmanagerapp.presentation;
 
-
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -69,6 +68,20 @@ public class MainActivity extends DaggerAppCompatActivity implements FilterView.
         viewModel.filterAll();
     }
 
+    @Override
+    public void onFilterHour() {
+        viewModel.filterForHour();
+    }
+
+    @Override
+    public void onFilterDay() {
+        viewModel.filterForDay();
+    }
+
+    @Override
+    public void onFilterMonth() {
+        viewModel.filterForMonth();
+    }
 
     @Inject
     public void setFactory(ViewModelProvider.Factory factory) {

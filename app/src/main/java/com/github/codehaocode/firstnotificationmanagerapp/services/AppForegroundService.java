@@ -14,8 +14,9 @@ import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
 import com.github.codehaocode.firstnotificationmanagerapp.Application;
-import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
 import com.github.codehaocode.firstnotificationmanagerapp.R;
+import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
+import com.github.codehaocode.firstnotificationmanagerapp.receiver.NotificationReceiver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -73,7 +74,7 @@ public class AppForegroundService extends DaggerService {
         Intent contentIntent = new Intent(this, MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, contentIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         return new NotificationCompat.Builder(this, Application.NOTIFICATION_SERVICE_CHANNEL_ID)
-                .setSmallIcon(R.drawable.ic_launcher_foreground)
+                .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(getString(R.string.recording_notifications))
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_SERVICE)

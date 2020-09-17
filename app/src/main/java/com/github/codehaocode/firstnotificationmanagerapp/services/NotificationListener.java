@@ -4,17 +4,19 @@ import android.app.Notification;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.os.IBinder;
 import android.service.notification.NotificationListenerService;
 import android.service.notification.StatusBarNotification;
 
+import com.github.codehaocode.firstnotificationmanagerapp.receiver.NotificationReceiver;
+
 import java.util.Calendar;
 
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_APP_NAME;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_APP_PACKAGE_NAME;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_CALENDAR;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_ID;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_TEXT;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_APP_NAME;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_APP_PACKAGE_NAME;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_CALENDAR;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_ID;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_TEXT;
+
 
 public class NotificationListener extends NotificationListenerService {
 

@@ -1,15 +1,18 @@
-package com.github.codehaocode.firstnotificationmanagerapp.services;
+package com.github.codehaocode.firstnotificationmanagerapp.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+
+import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService;
+
 import java.util.Objects;
 
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_APP_NAME;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_APP_PACKAGE_NAME;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_CALENDAR;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_ID;
-import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessor.EXTRA_NOTIFICATION_TEXT;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_APP_NAME;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_APP_PACKAGE_NAME;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_CALENDAR;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_ID;
+import static com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService.EXTRA_NOTIFICATION_TEXT;
 
 public class NotificationReceiver extends BroadcastReceiver {
 
@@ -19,14 +22,14 @@ public class NotificationReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (Objects.equals(intent.getAction(), ACTION_NOTIFICATION_RECEIVED)) {
 
-            Intent processorService = new Intent(context, NotificationProcessor.class);
+            Intent processorService = new Intent(context, NotificationProcessorService.class);
 
             processorService.putExtra(EXTRA_NOTIFICATION_ID, intent.getIntExtra(EXTRA_NOTIFICATION_ID, -1));
             processorService.putExtra(EXTRA_NOTIFICATION_APP_NAME, intent.getStringExtra(EXTRA_NOTIFICATION_APP_NAME));
             processorService.putExtra(EXTRA_NOTIFICATION_APP_PACKAGE_NAME, intent.getStringExtra(EXTRA_NOTIFICATION_APP_PACKAGE_NAME));
             processorService.putExtra(EXTRA_NOTIFICATION_TEXT, intent.getStringExtra(EXTRA_NOTIFICATION_TEXT));
             processorService.putExtra(EXTRA_NOTIFICATION_CALENDAR, intent.getSerializableExtra(EXTRA_NOTIFICATION_CALENDAR));
-            NotificationProcessor.enqueueWork(context, processorService);
+            NotificationProcessorService.enqueueWork(context, processorService);
         }
     }
 }

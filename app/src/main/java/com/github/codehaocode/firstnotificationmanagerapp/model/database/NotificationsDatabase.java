@@ -1,4 +1,5 @@
 package com.github.codehaocode.firstnotificationmanagerapp.model.database;
+
 import android.content.Context;
 
 import androidx.room.Database;
@@ -16,4 +17,3 @@ public abstract class NotificationsDatabase extends RoomDatabase {
         return Room.databaseBuilder(context, NotificationsDatabase.class, DATABASE_NAME).fallbackToDestructiveMigration().build();
     }
 }
-

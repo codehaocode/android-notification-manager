@@ -1,12 +1,5 @@
 <resources>
     <string name="app_name">First Notification Manager App</string>
-    <string name="service_label">Notification Listener Service</string>
-    <string name="image_change_explanaton">The Image bellow will change when a Notification is intercepted</string>
-    <string name="notification_logo">Intercepted Notification Logo</string>
-    <string name="notification_listener_service">"Notification Listener Service"</string>
-    <string name="notification_listener_service_explanation">"For the the app. to work you need to enable the Notification Listener Service. Enable it now?"</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
     <string name="all">All</string>
     <string name="per_hour">Per Hour</string>
     <string name="per_day">Per Day</string>
@@ -15,6 +8,9 @@
     <string name="stop">Stop</string>
     <string name="there_is_no_notifications">There\'s no notifications yet</string>
     <string name="filterAction">Filter</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="notification_listener_service">Notification Listener Service</string>
     <string name="notification_listener_service_expplanation">This app requires you to allow Notification Listener Service to work properly</string>
     <string name="notification_foreground_service">Channel where the foreground service is displayed</string>
     <string name="notification_explanation">Channel where app notifications about amount of recorded notifications come.</string>

@@ -21,4 +21,3 @@ public interface NotificationsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertNotification(NotificationEntity notification);
 }
-

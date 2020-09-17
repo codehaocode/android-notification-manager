@@ -8,8 +8,7 @@ import com.github.codehaocode.firstnotificationmanagerapp.model.mapper.Notificat
 import com.github.codehaocode.firstnotificationmanagerapp.model.repository.NotificationsRepository;
 import com.github.codehaocode.firstnotificationmanagerapp.model.repository.NotificationsRepositoryImpl;
 import com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode;
-import com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.FilterMode;
-import com.github.codehaocode.firstnotificationmanagerapp.services.NotificationReceiver;
+import com.github.codehaocode.firstnotificationmanagerapp.receiver.NotificationReceiver;
 
 import javax.inject.Singleton;
 
@@ -62,4 +61,3 @@ public class ModelModule {
         return BehaviorSubject.create();
     }
 }
-

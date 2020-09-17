@@ -56,7 +56,7 @@ public class NotificationsListAdapter extends RecyclerView.Adapter<Notifications
                 ((ImageView) itemView.findViewById(R.id.icon)).setImageDrawable(icon);
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
-                Drawable iconDrawable = itemView.getContext().getDrawable(R.drawable.ic_launcher_foreground);
+                Drawable iconDrawable = itemView.getContext().getDrawable(R.drawable.ic_notification);
                 ((ImageView) itemView.findViewById(R.id.icon)).setImageDrawable(iconDrawable);
             }
             ((TextView) itemView.findViewById(R.id.title)).setText(notification.getAppName());

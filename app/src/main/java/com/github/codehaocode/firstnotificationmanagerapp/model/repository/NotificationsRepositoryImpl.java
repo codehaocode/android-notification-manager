@@ -2,8 +2,8 @@ package com.github.codehaocode.firstnotificationmanagerapp.model.repository;
 
 import androidx.annotation.NonNull;
 
-import com.github.codehaocode.firstnotificationmanagerapp.model.NotificationModel;
 import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationEntity;
+import com.github.codehaocode.firstnotificationmanagerapp.model.NotificationModel;
 import com.github.codehaocode.firstnotificationmanagerapp.model.database.NotificationsDao;
 import com.github.codehaocode.firstnotificationmanagerapp.model.mapper.TypeMapper;
 import com.github.codehaocode.firstnotificationmanagerapp.presentation.filter.period.FilterPeriod;
@@ -40,4 +40,3 @@ public class NotificationsRepositoryImpl implements NotificationsRepository {
         return notificationsDao.getNotificationsCount();
     }
 }
-

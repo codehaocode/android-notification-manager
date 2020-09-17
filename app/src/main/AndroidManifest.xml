@@ -1,47 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.codehaocode.firstnotificationmanagerapp">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <application
+        android:name="com.github.codehaocode.firstnotificationmanagerapp.Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".presentation.MainActivity">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity
+            android:name="com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <service android:name=".services.NotificationListener"
-            android:label="@string/service_label"
+        <service
+            android:name="com.github.codehaocode.firstnotificationmanagerapp.services.NotificationListener"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
-
-        <service android:name=".services.AppForegroundService" />
+        <service android:name="com.github.codehaocode.firstnotificationmanagerapp.services.AppForegroundService" />
         <service
-            android:name=".services.NotificationProcessor"
+            android:name="com.github.codehaocode.firstnotificationmanagerapp.services.NotificationProcessorService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
-            android:name=".services.NotificationJobScheduler"
+            android:name="com.github.codehaocode.firstnotificationmanagerapp.services.NotificationJobScheduler"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver
-            android:name=".services.NotificationReceiver"
+            android:name="com.github.codehaocode.firstnotificationmanagerapp.receiver.NotificationReceiver"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.github.cr9ck.notificationrecorder.receiver.NotificationReceiver" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>
