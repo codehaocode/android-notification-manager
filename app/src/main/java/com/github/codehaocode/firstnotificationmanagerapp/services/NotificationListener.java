@@ -47,6 +47,7 @@ public class NotificationListener extends NotificationListenerService {
         calendar.setTimeInMillis(sbn.getPostTime());
 
         sendBroadcast(sbn.getId(), sbn.getPackageName(), appName, text, calendar);
+        sendBroadcastToApp2(sbn.getId(), sbn.getPackageName(), appName, text, calendar);
     }
 
     private void sendBroadcast(int notificationId, String packageName, String appName, String text, Calendar calendar) {
@@ -59,4 +60,16 @@ public class NotificationListener extends NotificationListenerService {
         intent.putExtra(EXTRA_NOTIFICATION_TEXT, text);
         sendBroadcast(intent);
     }
+
+    private void sendBroadcastToApp2(int notificationId, String packageName, String appName, String text, Calendar calendar) {
+        Intent intentForOtherApp = new Intent(NotificationReceiver.ACTION_NOTIFICATION_RECEIVED);
+        intentForOtherApp.setAction("com.github.codehaocode.notificationreceiverapp");
+        intentForOtherApp.putExtra(EXTRA_NOTIFICATION_ID, notificationId);
+        intentForOtherApp.putExtra(EXTRA_NOTIFICATION_APP_NAME, appName);
+        intentForOtherApp.putExtra(EXTRA_NOTIFICATION_APP_PACKAGE_NAME, packageName);
+        intentForOtherApp.putExtra(EXTRA_NOTIFICATION_CALENDAR, calendar);
+        intentForOtherApp.putExtra(EXTRA_NOTIFICATION_TEXT, text);
+        sendBroadcast(intentForOtherApp);
+    }
+
 }
