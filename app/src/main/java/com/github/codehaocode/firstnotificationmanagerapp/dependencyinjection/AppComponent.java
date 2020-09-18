@@ -1,11 +1,11 @@
-package com.github.codehaocode.firstnotificationmanagerapp.di;
+package com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection;
 
 import android.content.Context;
 
 import com.github.codehaocode.firstnotificationmanagerapp.Application;
-import com.github.codehaocode.firstnotificationmanagerapp.di.modules.ComponentsModule;
-import com.github.codehaocode.firstnotificationmanagerapp.di.modules.ModelModule;
-import com.github.codehaocode.firstnotificationmanagerapp.di.modules.ViewModelModule;
+import com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.modules.ComponentsModule;
+import com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.modules.ModelModule;
+import com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.modules.ViewModelModule;
 
 import javax.inject.Singleton;
 

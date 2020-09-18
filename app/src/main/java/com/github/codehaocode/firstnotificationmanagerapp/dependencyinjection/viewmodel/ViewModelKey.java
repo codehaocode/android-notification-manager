@@ -1,4 +1,4 @@
-package com.github.codehaocode.firstnotificationmanagerapp.di.viewmodel;
+package com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

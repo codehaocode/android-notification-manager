@@ -9,7 +9,7 @@ import android.text.TextUtils;
 
 import androidx.annotation.RequiresApi;
 
-import com.github.codehaocode.firstnotificationmanagerapp.di.DaggerAppComponent;
+import com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.DaggerAppComponent;
 
 import dagger.android.AndroidInjector;
 import dagger.android.support.DaggerApplication;

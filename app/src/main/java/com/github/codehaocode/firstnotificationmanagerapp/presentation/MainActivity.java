@@ -2,6 +2,7 @@ package com.github.codehaocode.firstnotificationmanagerapp.presentation;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -46,6 +47,9 @@ public class MainActivity extends DaggerAppCompatActivity implements FilterView.
         viewModel = new ViewModelProvider(getViewModelStore(), factory).get(com.github.codehaocode.firstnotificationmanagerapp.presentation.MainViewModel.class);
         initOnClick();
         initObservers();
+
+        if (Build.VERSION.SDK_INT >= 21)
+            getWindow().setNavigationBarColor(getResources().getColor(R.color.colorGray));
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
+package com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.modules;
 
 import android.content.Context;
 

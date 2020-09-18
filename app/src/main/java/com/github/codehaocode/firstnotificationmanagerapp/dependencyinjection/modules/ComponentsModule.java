@@ -1,4 +1,4 @@
-package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
+package com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.modules;
 
 import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainActivity;
 import com.github.codehaocode.firstnotificationmanagerapp.services.AppForegroundService;

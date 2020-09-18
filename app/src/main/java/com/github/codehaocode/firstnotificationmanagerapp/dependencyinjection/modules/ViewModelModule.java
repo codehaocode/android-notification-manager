@@ -1,10 +1,10 @@
-package com.github.codehaocode.firstnotificationmanagerapp.di.modules;
+package com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.modules;
 
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.github.codehaocode.firstnotificationmanagerapp.di.viewmodel.ViewModelFactory;
-import com.github.codehaocode.firstnotificationmanagerapp.di.viewmodel.ViewModelKey;
+import com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.viewmodel.ViewModelFactory;
+import com.github.codehaocode.firstnotificationmanagerapp.dependencyinjection.viewmodel.ViewModelKey;
 import com.github.codehaocode.firstnotificationmanagerapp.presentation.MainViewModel;
 
 import dagger.Binds;
