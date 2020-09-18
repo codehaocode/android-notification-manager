@@ -41,7 +41,7 @@
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="com.github.cr9ck.notificationrecorder.receiver.NotificationReceiver" />
+                <action android:name="com.github.codehaocode.firstnotificationmanagerapp.receiver.NotificationReceiver" />
             </intent-filter>
         </receiver>
     </application>
